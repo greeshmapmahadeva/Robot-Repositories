@@ -40,14 +40,14 @@ TC_03 Goto ${site_url} and search Flipkart
     And Validate search results has ${searchitem}[2]
     And Click on first link that contains Robot Framework and validate title        ${searchitem}[2]    ${title}[2]
 
-TC_03 Goto ${site_url} and search pypi
+TC_04 Goto ${site_url} and search pypi
     Given Navigate to Webpage
     When Webpage is open and title is visible
     Then Search something in google search bar    ${searchitem}[3]
     And Validate search results has ${searchitem}[3]
     And Click on first link that contains Robot Framework and validate title        ${searchitem}[3]    ${title}[3]
 
-TC_03 Goto ${site_url} and search Python
+TC_05 Goto ${site_url} and search Python
     Given Navigate to Webpage
     When Webpage is open and title is visible
     Then Search something in google search bar    ${searchitem}[4]
