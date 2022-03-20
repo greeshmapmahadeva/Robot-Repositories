@@ -1,84 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.0 on darwin)" generated="20220320 12:26:26.225" rpa="false" schemaversion="2">
-<suite id="s1" name="Google Home Search Rf" source="/Users/manikantanuv/Documents/Robot_Repositories/tests/google_home_search_rf.robot">
+<robot generator="Robot 4.1.3 (Python 3.10.0 on darwin)" generated="20220320 18:43:15.715" rpa="false" schemaversion="2">
+<suite id="s1" name="Google Home Search Rf Chrome &amp; Google Home Search Rf Firefox">
+<suite id="s1-s1" name="Google Home Search Rf Chrome" source="/Users/manikantanuv/Documents/Robot_Repositories/tests/google_home_search_rf_chrome.robot">
 <kw name="Run Keyword" library="BuiltIn" type="SETUP">
 <arg>Running the tests in chrome headless</arg>
 <doc>Executes the given keyword with the given arguments.</doc>
 <kw name="Running the tests in chrome headless" library="initialize">
 <kw name="Get Chromedriver Path" library="chromedriver_manager">
 <var>${driver}</var>
-<msg timestamp="20220320 12:26:26.341" level="INFO">
+<msg timestamp="20220320 18:43:15.830" level="INFO">
 </msg>
-<msg timestamp="20220320 12:26:26.341" level="INFO">====== WebDriver manager ======</msg>
-<msg timestamp="20220320 12:26:26.379" level="INFO">Current google-chrome version is 99.0.4844</msg>
-<msg timestamp="20220320 12:26:26.380" level="INFO">Get LATEST chromedriver version for 99.0.4844 google-chrome</msg>
-<msg timestamp="20220320 12:26:26.798" level="INFO">Driver [/Users/manikantanuv/Documents/Robot_Repositories/drivers/chromedriver/mac64_m1/99.0.4844.51/chromedriver] found in cache</msg>
-<msg timestamp="20220320 12:26:26.799" level="INFO">/Users/manikantanuv/Documents/Robot_Repositories/drivers/chromedriver/mac64_m1/99.0.4844.51/chromedriver</msg>
-<msg timestamp="20220320 12:26:26.799" level="INFO">====== WebDriver manager ======
+<msg timestamp="20220320 18:43:15.830" level="INFO">====== WebDriver manager ======</msg>
+<msg timestamp="20220320 18:43:15.870" level="INFO">Current google-chrome version is 99.0.4844</msg>
+<msg timestamp="20220320 18:43:15.870" level="INFO">Get LATEST chromedriver version for 99.0.4844 google-chrome</msg>
+<msg timestamp="20220320 18:43:16.130" level="INFO">Driver [/Users/manikantanuv/Documents/Robot_Repositories/drivers/chromedriver/mac64_m1/99.0.4844.51/chromedriver] found in cache</msg>
+<msg timestamp="20220320 18:43:16.131" level="INFO">/Users/manikantanuv/Documents/Robot_Repositories/drivers/chromedriver/mac64_m1/99.0.4844.51/chromedriver</msg>
+<msg timestamp="20220320 18:43:16.131" level="INFO">====== WebDriver manager ======
 Current google-chrome version is 99.0.4844
 Get LATEST chromedriver version for 99.0.4844 google-chrome
 Driver [/Users/manikantanuv/Documents/Robot_Repositories/drivers/chromedriver/mac64_m1/99.0.4844.51/chromedriver] found in cache</msg>
-<msg timestamp="20220320 12:26:26.799" level="INFO">${driver} = /Users/manikantanuv/Documents/Robot_Repositories/drivers/chromedriver/mac64_m1/99.0.4844.51/chromedriver</msg>
-<status status="PASS" starttime="20220320 12:26:26.341" endtime="20220320 12:26:26.799"/>
+<msg timestamp="20220320 18:43:16.131" level="INFO">${driver} = /Users/manikantanuv/Documents/Robot_Repositories/drivers/chromedriver/mac64_m1/99.0.4844.51/chromedriver</msg>
+<status status="PASS" starttime="20220320 18:43:15.830" endtime="20220320 18:43:16.131"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>${driver}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220320 12:26:26.800" level="INFO">/Users/manikantanuv/Documents/Robot_Repositories/drivers/chromedriver/mac64_m1/99.0.4844.51/chromedriver</msg>
-<status status="PASS" starttime="20220320 12:26:26.799" endtime="20220320 12:26:26.800"/>
+<msg timestamp="20220320 18:43:16.132" level="INFO">/Users/manikantanuv/Documents/Robot_Repositories/drivers/chromedriver/mac64_m1/99.0.4844.51/chromedriver</msg>
+<status status="PASS" starttime="20220320 18:43:16.132" endtime="20220320 18:43:16.132"/>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <var>${chrome options}</var>
 <arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
 <arg>sys, selenium.webdriver</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20220320 12:26:26.801" level="INFO">${chrome options} = &lt;selenium.webdriver.chrome.options.Options object at 0x102809060&gt;</msg>
-<status status="PASS" starttime="20220320 12:26:26.800" endtime="20220320 12:26:26.801"/>
+<msg timestamp="20220320 18:43:16.133" level="INFO">${chrome options} = &lt;selenium.webdriver.chrome.options.Options object at 0x1062c6620&gt;</msg>
+<status status="PASS" starttime="20220320 18:43:16.132" endtime="20220320 18:43:16.133"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${chrome options}</arg>
 <arg>add_argument</arg>
 <arg>headless</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20220320 12:26:26.801" endtime="20220320 12:26:26.801"/>
+<status status="PASS" starttime="20220320 18:43:16.133" endtime="20220320 18:43:16.133"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${chrome options}</arg>
 <arg>add_argument</arg>
 <arg>disable-gpu</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20220320 12:26:26.801" endtime="20220320 12:26:26.801"/>
+<status status="PASS" starttime="20220320 18:43:16.133" endtime="20220320 18:43:16.134"/>
 </kw>
 <kw name="Create Webdriver" library="SeleniumLibrary">
 <arg>Chrome</arg>
 <arg>chrome_options=${chrome options}</arg>
 <arg>executable_path=${driver}</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<msg timestamp="20220320 12:26:26.802" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
-<status status="PASS" starttime="20220320 12:26:26.801" endtime="20220320 12:26:27.626"/>
+<msg timestamp="20220320 18:43:16.134" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20220320 18:43:16.134" endtime="20220320 18:43:16.842"/>
 </kw>
-<status status="PASS" starttime="20220320 12:26:26.340" endtime="20220320 12:26:27.626"/>
+<status status="PASS" starttime="20220320 18:43:15.830" endtime="20220320 18:43:16.843"/>
 </kw>
-<status status="PASS" starttime="20220320 12:26:26.340" endtime="20220320 12:26:27.626"/>
+<status status="PASS" starttime="20220320 18:43:15.830" endtime="20220320 18:43:16.843"/>
 </kw>
-<test id="s1-t1" name="TC_01 Goto https://www.google.com and search Robot Framework">
+<test id="s1-s1-t1" name="TC_01 Goto https://www.google.com and search Robot Framework">
 <kw name="Given Navigate to Webpage" library="pg_google_home">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${site_url}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220320 12:26:27.627" level="INFO">Opening url 'https://www.google.com'</msg>
-<status status="PASS" starttime="20220320 12:26:27.627" endtime="20220320 12:26:34.226"/>
+<msg timestamp="20220320 18:43:16.844" level="INFO">Opening url 'https://www.google.com'</msg>
+<status status="PASS" starttime="20220320 18:43:16.843" endtime="20220320 18:43:19.762"/>
 </kw>
-<status status="PASS" starttime="20220320 12:26:27.626" endtime="20220320 12:26:34.227"/>
+<status status="PASS" starttime="20220320 18:43:16.843" endtime="20220320 18:43:19.763"/>
 </kw>
 <kw name="When Webpage is open and title is visible" library="pg_google_home">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>${title_url}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220320 12:26:34.234" level="INFO">Page title is 'Google'.</msg>
-<status status="PASS" starttime="20220320 12:26:34.228" endtime="20220320 12:26:34.234"/>
+<msg timestamp="20220320 18:43:19.767" level="INFO">Page title is 'Google'.</msg>
+<status status="PASS" starttime="20220320 18:43:19.763" endtime="20220320 18:43:19.767"/>
 </kw>
-<status status="PASS" starttime="20220320 12:26:34.227" endtime="20220320 12:26:34.234"/>
+<status status="PASS" starttime="20220320 18:43:19.763" endtime="20220320 18:43:19.767"/>
 </kw>
 <kw name="Then Search something in google search bar" library="pg_google_home">
 <arg>${searchitem}[0]</arg>
@@ -86,30 +87,30 @@ Driver [/Users/manikantanuv/Documents/Robot_Repositories/drivers/chromedriver/ma
 <arg>${ele_search}</arg>
 <arg>${searchitem}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220320 12:26:34.236" level="INFO">Typing text 'Robot Framework' into text field 'xpath://input[@title='Search']'.</msg>
-<status status="PASS" starttime="20220320 12:26:34.235" endtime="20220320 12:26:34.320"/>
+<msg timestamp="20220320 18:43:19.768" level="INFO">Typing text 'Robot Framework' into text field 'xpath://input[@title='Search']'.</msg>
+<status status="PASS" starttime="20220320 18:43:19.767" endtime="20220320 18:43:19.847"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${ele_btn_search}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220320 12:26:34.320" level="INFO">Clicking element 'xpath:(//*[@value='Google Search'])[2]'.</msg>
-<status status="PASS" starttime="20220320 12:26:34.320" endtime="20220320 12:26:40.942"/>
+<msg timestamp="20220320 18:43:19.848" level="INFO">Clicking element 'xpath:(//*[@value='Google Search'])[2]'.</msg>
+<status status="PASS" starttime="20220320 18:43:19.847" endtime="20220320 18:43:28.004"/>
 </kw>
-<status status="PASS" starttime="20220320 12:26:34.235" endtime="20220320 12:26:40.942"/>
+<status status="PASS" starttime="20220320 18:43:19.767" endtime="20220320 18:43:28.004"/>
 </kw>
 <kw name="And Validate search results has ${searchitem}[0]" library="pg_google_home" sourcename="Validate search results has ${searchitem}">
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>Google</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220320 12:26:40.943" endtime="20220320 12:26:40.959"/>
+<status status="PASS" starttime="20220320 18:43:28.005" endtime="20220320 18:43:28.024"/>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>${searchitem}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20220320 12:26:40.981" level="INFO">Current page contains text 'Robot Framework'.</msg>
-<status status="PASS" starttime="20220320 12:26:40.959" endtime="20220320 12:26:40.981"/>
+<msg timestamp="20220320 18:43:28.044" level="INFO">Current page contains text 'Robot Framework'.</msg>
+<status status="PASS" starttime="20220320 18:43:28.024" endtime="20220320 18:43:28.044"/>
 </kw>
-<status status="PASS" starttime="20220320 12:26:40.942" endtime="20220320 12:26:40.981"/>
+<status status="PASS" starttime="20220320 18:43:28.004" endtime="20220320 18:43:28.044"/>
 </kw>
 <kw name="And Click on first link that contains Robot Framework and validate title" library="pg_google_home">
 <arg>${searchitem}[0]</arg>
@@ -117,48 +118,48 @@ Driver [/Users/manikantanuv/Documents/Robot_Repositories/drivers/chromedriver/ma
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=//h3[text()=\'${searchitem}']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220320 12:26:40.982" level="INFO">Clicking element 'xpath=//h3[text()='Robot Framework']'.</msg>
-<status status="PASS" starttime="20220320 12:26:40.981" endtime="20220320 12:26:41.006"/>
+<msg timestamp="20220320 18:43:28.045" level="INFO">Clicking element 'xpath=//h3[text()='Robot Framework']'.</msg>
+<status status="PASS" starttime="20220320 18:43:28.044" endtime="20220320 18:43:28.068"/>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>//title[text()=\'${title}\']</arg>
 <arg>10</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20220320 12:26:41.006" endtime="20220320 12:27:04.363"/>
+<status status="PASS" starttime="20220320 18:43:28.068" endtime="20220320 18:43:42.179"/>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>${title}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220320 12:27:04.372" level="INFO">Page title is 'Robot Framework'.</msg>
-<status status="PASS" starttime="20220320 12:27:04.363" endtime="20220320 12:27:04.372"/>
+<msg timestamp="20220320 18:43:42.195" level="INFO">Page title is 'Robot Framework'.</msg>
+<status status="PASS" starttime="20220320 18:43:42.179" endtime="20220320 18:43:42.196"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20220320 12:27:04.587" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220320 12:27:04.372" endtime="20220320 12:27:04.588"/>
+<msg timestamp="20220320 18:43:42.267" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-43.png"&gt;&lt;img src="selenium-screenshot-43.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220320 18:43:42.196" endtime="20220320 18:43:42.267"/>
 </kw>
-<status status="PASS" starttime="20220320 12:26:40.981" endtime="20220320 12:27:04.588"/>
+<status status="PASS" starttime="20220320 18:43:28.044" endtime="20220320 18:43:42.267"/>
 </kw>
-<status status="PASS" starttime="20220320 12:26:27.626" endtime="20220320 12:27:04.588"/>
+<status status="PASS" starttime="20220320 18:43:16.843" endtime="20220320 18:43:42.268"/>
 </test>
-<test id="s1-t2" name="TC_02 Goto https://www.google.com and search Amazon">
+<test id="s1-s1-t2" name="TC_02 Goto https://www.google.com and search Amazon">
 <kw name="Given Navigate to Webpage" library="pg_google_home">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${site_url}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220320 12:27:04.589" level="INFO">Opening url 'https://www.google.com'</msg>
-<status status="PASS" starttime="20220320 12:27:04.588" endtime="20220320 12:27:07.521"/>
+<msg timestamp="20220320 18:43:42.268" level="INFO">Opening url 'https://www.google.com'</msg>
+<status status="PASS" starttime="20220320 18:43:42.268" endtime="20220320 18:43:43.460"/>
 </kw>
-<status status="PASS" starttime="20220320 12:27:04.588" endtime="20220320 12:27:07.522"/>
+<status status="PASS" starttime="20220320 18:43:42.268" endtime="20220320 18:43:43.460"/>
 </kw>
 <kw name="When Webpage is open and title is visible" library="pg_google_home">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>${title_url}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220320 12:27:07.529" level="INFO">Page title is 'Google'.</msg>
-<status status="PASS" starttime="20220320 12:27:07.523" endtime="20220320 12:27:07.529"/>
+<msg timestamp="20220320 18:43:43.462" level="INFO">Page title is 'Google'.</msg>
+<status status="PASS" starttime="20220320 18:43:43.461" endtime="20220320 18:43:43.463"/>
 </kw>
-<status status="PASS" starttime="20220320 12:27:07.522" endtime="20220320 12:27:07.529"/>
+<status status="PASS" starttime="20220320 18:43:43.461" endtime="20220320 18:43:43.463"/>
 </kw>
 <kw name="Then Search something in google search bar" library="pg_google_home">
 <arg>${searchitem}[1]</arg>
@@ -166,30 +167,30 @@ Driver [/Users/manikantanuv/Documents/Robot_Repositories/drivers/chromedriver/ma
 <arg>${ele_search}</arg>
 <arg>${searchitem}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220320 12:27:07.531" level="INFO">Typing text 'Amazon.in' into text field 'xpath://input[@title='Search']'.</msg>
-<status status="PASS" starttime="20220320 12:27:07.531" endtime="20220320 12:27:07.593"/>
+<msg timestamp="20220320 18:43:43.463" level="INFO">Typing text 'Amazon.in' into text field 'xpath://input[@title='Search']'.</msg>
+<status status="PASS" starttime="20220320 18:43:43.463" endtime="20220320 18:43:43.509"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${ele_btn_search}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220320 12:27:07.593" level="INFO">Clicking element 'xpath:(//*[@value='Google Search'])[2]'.</msg>
-<status status="PASS" starttime="20220320 12:27:07.593" endtime="20220320 12:27:12.227"/>
+<msg timestamp="20220320 18:43:43.510" level="INFO">Clicking element 'xpath:(//*[@value='Google Search'])[2]'.</msg>
+<status status="PASS" starttime="20220320 18:43:43.510" endtime="20220320 18:43:48.490"/>
 </kw>
-<status status="PASS" starttime="20220320 12:27:07.530" endtime="20220320 12:27:12.227"/>
+<status status="PASS" starttime="20220320 18:43:43.463" endtime="20220320 18:43:48.490"/>
 </kw>
 <kw name="And Validate search results has ${searchitem}[1]" library="pg_google_home" sourcename="Validate search results has ${searchitem}">
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>Google</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220320 12:27:12.228" endtime="20220320 12:27:12.244"/>
+<status status="PASS" starttime="20220320 18:43:48.491" endtime="20220320 18:43:48.505"/>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>${searchitem}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20220320 12:27:12.256" level="INFO">Current page contains text 'Amazon.in'.</msg>
-<status status="PASS" starttime="20220320 12:27:12.244" endtime="20220320 12:27:12.256"/>
+<msg timestamp="20220320 18:43:48.518" level="INFO">Current page contains text 'Amazon.in'.</msg>
+<status status="PASS" starttime="20220320 18:43:48.506" endtime="20220320 18:43:48.518"/>
 </kw>
-<status status="PASS" starttime="20220320 12:27:12.227" endtime="20220320 12:27:12.256"/>
+<status status="PASS" starttime="20220320 18:43:48.491" endtime="20220320 18:43:48.518"/>
 </kw>
 <kw name="And Click on first link that contains Robot Framework and validate title" library="pg_google_home">
 <arg>${searchitem}[1]</arg>
@@ -197,48 +198,48 @@ Driver [/Users/manikantanuv/Documents/Robot_Repositories/drivers/chromedriver/ma
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=//h3[text()=\'${searchitem}']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220320 12:27:12.257" level="INFO">Clicking element 'xpath=//h3[text()='Amazon.in']'.</msg>
-<status status="PASS" starttime="20220320 12:27:12.257" endtime="20220320 12:27:33.656"/>
+<msg timestamp="20220320 18:43:48.519" level="INFO">Clicking element 'xpath=//h3[text()='Amazon.in']'.</msg>
+<status status="PASS" starttime="20220320 18:43:48.518" endtime="20220320 18:43:52.666"/>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>//title[text()=\'${title}\']</arg>
 <arg>10</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20220320 12:27:33.656" endtime="20220320 12:27:33.684"/>
+<status status="PASS" starttime="20220320 18:43:52.666" endtime="20220320 18:43:52.677"/>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>${title}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220320 12:27:33.686" level="INFO">Page title is 'Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in'.</msg>
-<status status="PASS" starttime="20220320 12:27:33.684" endtime="20220320 12:27:33.686"/>
+<msg timestamp="20220320 18:43:52.678" level="INFO">Page title is 'Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in'.</msg>
+<status status="PASS" starttime="20220320 18:43:52.677" endtime="20220320 18:43:52.678"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20220320 12:27:33.877" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220320 12:27:33.686" endtime="20220320 12:27:33.877"/>
+<msg timestamp="20220320 18:43:52.783" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-44.png"&gt;&lt;img src="selenium-screenshot-44.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220320 18:43:52.678" endtime="20220320 18:43:52.783"/>
 </kw>
-<status status="PASS" starttime="20220320 12:27:12.256" endtime="20220320 12:27:33.877"/>
+<status status="PASS" starttime="20220320 18:43:48.518" endtime="20220320 18:43:52.783"/>
 </kw>
-<status status="PASS" starttime="20220320 12:27:04.588" endtime="20220320 12:27:33.877"/>
+<status status="PASS" starttime="20220320 18:43:42.268" endtime="20220320 18:43:52.784"/>
 </test>
-<test id="s1-t3" name="TC_02 Goto https://www.google.com and search Flipkart">
+<test id="s1-s1-t3" name="TC_03 Goto https://www.google.com and search Flipkart">
 <kw name="Given Navigate to Webpage" library="pg_google_home">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${site_url}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220320 12:27:33.878" level="INFO">Opening url 'https://www.google.com'</msg>
-<status status="PASS" starttime="20220320 12:27:33.878" endtime="20220320 12:27:36.917"/>
+<msg timestamp="20220320 18:43:52.784" level="INFO">Opening url 'https://www.google.com'</msg>
+<status status="PASS" starttime="20220320 18:43:52.784" endtime="20220320 18:43:53.805"/>
 </kw>
-<status status="PASS" starttime="20220320 12:27:33.878" endtime="20220320 12:27:36.917"/>
+<status status="PASS" starttime="20220320 18:43:52.784" endtime="20220320 18:43:53.806"/>
 </kw>
 <kw name="When Webpage is open and title is visible" library="pg_google_home">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>${title_url}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220320 12:27:36.924" level="INFO">Page title is 'Google'.</msg>
-<status status="PASS" starttime="20220320 12:27:36.918" endtime="20220320 12:27:36.924"/>
+<msg timestamp="20220320 18:43:53.808" level="INFO">Page title is 'Google'.</msg>
+<status status="PASS" starttime="20220320 18:43:53.806" endtime="20220320 18:43:53.808"/>
 </kw>
-<status status="PASS" starttime="20220320 12:27:36.918" endtime="20220320 12:27:36.924"/>
+<status status="PASS" starttime="20220320 18:43:53.806" endtime="20220320 18:43:53.808"/>
 </kw>
 <kw name="Then Search something in google search bar" library="pg_google_home">
 <arg>${searchitem}[2]</arg>
@@ -246,30 +247,30 @@ Driver [/Users/manikantanuv/Documents/Robot_Repositories/drivers/chromedriver/ma
 <arg>${ele_search}</arg>
 <arg>${searchitem}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220320 12:27:36.926" level="INFO">Typing text 'Flipkart' into text field 'xpath://input[@title='Search']'.</msg>
-<status status="PASS" starttime="20220320 12:27:36.925" endtime="20220320 12:27:36.989"/>
+<msg timestamp="20220320 18:43:53.809" level="INFO">Typing text 'Flipkart' into text field 'xpath://input[@title='Search']'.</msg>
+<status status="PASS" starttime="20220320 18:43:53.808" endtime="20220320 18:43:53.846"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${ele_btn_search}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220320 12:27:36.989" level="INFO">Clicking element 'xpath:(//*[@value='Google Search'])[2]'.</msg>
-<status status="PASS" starttime="20220320 12:27:36.989" endtime="20220320 12:27:42.696"/>
+<msg timestamp="20220320 18:43:53.846" level="INFO">Clicking element 'xpath:(//*[@value='Google Search'])[2]'.</msg>
+<status status="PASS" starttime="20220320 18:43:53.846" endtime="20220320 18:43:57.446"/>
 </kw>
-<status status="PASS" starttime="20220320 12:27:36.924" endtime="20220320 12:27:42.696"/>
+<status status="PASS" starttime="20220320 18:43:53.808" endtime="20220320 18:43:57.446"/>
 </kw>
 <kw name="And Validate search results has ${searchitem}[2]" library="pg_google_home" sourcename="Validate search results has ${searchitem}">
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>Google</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220320 12:27:42.697" endtime="20220320 12:27:42.713"/>
+<status status="PASS" starttime="20220320 18:43:57.447" endtime="20220320 18:43:57.461"/>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>${searchitem}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20220320 12:27:42.735" level="INFO">Current page contains text 'Flipkart'.</msg>
-<status status="PASS" starttime="20220320 12:27:42.714" endtime="20220320 12:27:42.735"/>
+<msg timestamp="20220320 18:43:57.481" level="INFO">Current page contains text 'Flipkart'.</msg>
+<status status="PASS" starttime="20220320 18:43:57.461" endtime="20220320 18:43:57.481"/>
 </kw>
-<status status="PASS" starttime="20220320 12:27:42.696" endtime="20220320 12:27:42.735"/>
+<status status="PASS" starttime="20220320 18:43:57.446" endtime="20220320 18:43:57.481"/>
 </kw>
 <kw name="And Click on first link that contains Robot Framework and validate title" library="pg_google_home">
 <arg>${searchitem}[2]</arg>
@@ -277,47 +278,490 @@ Driver [/Users/manikantanuv/Documents/Robot_Repositories/drivers/chromedriver/ma
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=//h3[text()=\'${searchitem}']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220320 12:27:42.736" level="INFO">Clicking element 'xpath=//h3[text()='Flipkart']'.</msg>
-<status status="PASS" starttime="20220320 12:27:42.736" endtime="20220320 12:27:42.762"/>
+<msg timestamp="20220320 18:43:57.482" level="INFO">Clicking element 'xpath=//h3[text()='Flipkart']'.</msg>
+<status status="PASS" starttime="20220320 18:43:57.482" endtime="20220320 18:43:57.510"/>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>//title[text()=\'${title}\']</arg>
 <arg>10</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20220320 12:27:42.762" endtime="20220320 12:28:20.079"/>
+<status status="PASS" starttime="20220320 18:43:57.510" endtime="20220320 18:44:09.177"/>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>${title}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220320 12:28:20.083" level="INFO">Page title is 'Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books &amp; More. Best Offers!'.</msg>
-<status status="PASS" starttime="20220320 12:28:20.079" endtime="20220320 12:28:20.083"/>
+<msg timestamp="20220320 18:44:09.180" level="INFO">Page title is 'Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books &amp; More. Best Offers!'.</msg>
+<status status="PASS" starttime="20220320 18:44:09.177" endtime="20220320 18:44:09.180"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20220320 12:28:20.135" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220320 12:28:20.083" endtime="20220320 12:28:20.135"/>
+<msg timestamp="20220320 18:44:09.245" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-45.png"&gt;&lt;img src="selenium-screenshot-45.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220320 18:44:09.180" endtime="20220320 18:44:09.245"/>
 </kw>
-<status status="PASS" starttime="20220320 12:27:42.735" endtime="20220320 12:28:20.135"/>
+<status status="PASS" starttime="20220320 18:43:57.482" endtime="20220320 18:44:09.245"/>
 </kw>
-<status status="PASS" starttime="20220320 12:27:33.877" endtime="20220320 12:28:20.135"/>
+<status status="PASS" starttime="20220320 18:43:52.784" endtime="20220320 18:44:09.245"/>
+</test>
+<test id="s1-s1-t4" name="TC_03 Goto https://www.google.com and search pypi">
+<kw name="Given Navigate to Webpage" library="pg_google_home">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${site_url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220320 18:44:09.246" level="INFO">Opening url 'https://www.google.com'</msg>
+<status status="PASS" starttime="20220320 18:44:09.246" endtime="20220320 18:44:09.716"/>
+</kw>
+<status status="PASS" starttime="20220320 18:44:09.246" endtime="20220320 18:44:09.716"/>
+</kw>
+<kw name="When Webpage is open and title is visible" library="pg_google_home">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${title_url}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220320 18:44:09.718" level="INFO">Page title is 'Google'.</msg>
+<status status="PASS" starttime="20220320 18:44:09.716" endtime="20220320 18:44:09.718"/>
+</kw>
+<status status="PASS" starttime="20220320 18:44:09.716" endtime="20220320 18:44:09.718"/>
+</kw>
+<kw name="Then Search something in google search bar" library="pg_google_home">
+<arg>${searchitem}[3]</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${ele_search}</arg>
+<arg>${searchitem}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220320 18:44:09.719" level="INFO">Typing text 'PyPI · The Python Package Index' into text field 'xpath://input[@title='Search']'.</msg>
+<status status="PASS" starttime="20220320 18:44:09.719" endtime="20220320 18:44:09.771"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ele_btn_search}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220320 18:44:09.772" level="INFO">Clicking element 'xpath:(//*[@value='Google Search'])[2]'.</msg>
+<status status="PASS" starttime="20220320 18:44:09.771" endtime="20220320 18:44:11.205"/>
+</kw>
+<status status="PASS" starttime="20220320 18:44:09.718" endtime="20220320 18:44:11.205"/>
+</kw>
+<kw name="And Validate search results has ${searchitem}[3]" library="pg_google_home" sourcename="Validate search results has ${searchitem}">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Google</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220320 18:44:11.205" endtime="20220320 18:44:11.258"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${searchitem}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220320 18:44:11.267" level="INFO">Current page contains text 'PyPI · The Python Package Index'.</msg>
+<status status="PASS" starttime="20220320 18:44:11.258" endtime="20220320 18:44:11.267"/>
+</kw>
+<status status="PASS" starttime="20220320 18:44:11.205" endtime="20220320 18:44:11.267"/>
+</kw>
+<kw name="And Click on first link that contains Robot Framework and validate title" library="pg_google_home">
+<arg>${searchitem}[3]</arg>
+<arg>${title}[3]</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//h3[text()=\'${searchitem}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220320 18:44:11.267" level="INFO">Clicking element 'xpath=//h3[text()='PyPI · The Python Package Index']'.</msg>
+<status status="PASS" starttime="20220320 18:44:11.267" endtime="20220320 18:44:11.289"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//title[text()=\'${title}\']</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220320 18:44:11.289" endtime="20220320 18:44:16.206"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220320 18:44:16.209" level="INFO">Page title is 'PyPI · The Python Package Index'.</msg>
+<status status="PASS" starttime="20220320 18:44:16.206" endtime="20220320 18:44:16.209"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220320 18:44:16.260" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-46.png"&gt;&lt;img src="selenium-screenshot-46.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220320 18:44:16.210" endtime="20220320 18:44:16.260"/>
+</kw>
+<status status="PASS" starttime="20220320 18:44:11.267" endtime="20220320 18:44:16.260"/>
+</kw>
+<status status="PASS" starttime="20220320 18:44:09.246" endtime="20220320 18:44:16.260"/>
+</test>
+<test id="s1-s1-t5" name="TC_03 Goto https://www.google.com and search Python">
+<kw name="Given Navigate to Webpage" library="pg_google_home">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${site_url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220320 18:44:16.261" level="INFO">Opening url 'https://www.google.com'</msg>
+<status status="PASS" starttime="20220320 18:44:16.261" endtime="20220320 18:44:16.734"/>
+</kw>
+<status status="PASS" starttime="20220320 18:44:16.260" endtime="20220320 18:44:16.734"/>
+</kw>
+<kw name="When Webpage is open and title is visible" library="pg_google_home">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${title_url}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220320 18:44:16.736" level="INFO">Page title is 'Google'.</msg>
+<status status="PASS" starttime="20220320 18:44:16.734" endtime="20220320 18:44:16.736"/>
+</kw>
+<status status="PASS" starttime="20220320 18:44:16.734" endtime="20220320 18:44:16.736"/>
+</kw>
+<kw name="Then Search something in google search bar" library="pg_google_home">
+<arg>${searchitem}[4]</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${ele_search}</arg>
+<arg>${searchitem}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220320 18:44:16.737" level="INFO">Typing text 'Welcome to Python.org' into text field 'xpath://input[@title='Search']'.</msg>
+<status status="PASS" starttime="20220320 18:44:16.736" endtime="20220320 18:44:16.781"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ele_btn_search}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220320 18:44:16.782" level="INFO">Clicking element 'xpath:(//*[@value='Google Search'])[2]'.</msg>
+<status status="PASS" starttime="20220320 18:44:16.782" endtime="20220320 18:44:19.697"/>
+</kw>
+<status status="PASS" starttime="20220320 18:44:16.736" endtime="20220320 18:44:19.697"/>
+</kw>
+<kw name="And Validate search results has ${searchitem}[4]" library="pg_google_home" sourcename="Validate search results has ${searchitem}">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Google</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220320 18:44:19.698" endtime="20220320 18:44:19.712"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${searchitem}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220320 18:44:19.725" level="INFO">Current page contains text 'Welcome to Python.org'.</msg>
+<status status="PASS" starttime="20220320 18:44:19.712" endtime="20220320 18:44:19.725"/>
+</kw>
+<status status="PASS" starttime="20220320 18:44:19.697" endtime="20220320 18:44:19.725"/>
+</kw>
+<kw name="And Click on first link that contains Robot Framework and validate title" library="pg_google_home">
+<arg>${searchitem}[4]</arg>
+<arg>${title}[4]</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//h3[text()=\'${searchitem}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220320 18:44:19.726" level="INFO">Clicking element 'xpath=//h3[text()='Welcome to Python.org']'.</msg>
+<status status="PASS" starttime="20220320 18:44:19.726" endtime="20220320 18:44:19.755"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//title[text()=\'${title}\']</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220320 18:44:19.755" endtime="20220320 18:44:25.875"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220320 18:44:25.878" level="INFO">Page title is 'Welcome to Python.org'.</msg>
+<status status="PASS" starttime="20220320 18:44:25.875" endtime="20220320 18:44:25.879"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220320 18:44:25.958" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-47.png"&gt;&lt;img src="selenium-screenshot-47.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220320 18:44:25.879" endtime="20220320 18:44:25.958"/>
+</kw>
+<status status="PASS" starttime="20220320 18:44:19.726" endtime="20220320 18:44:25.958"/>
+</kw>
+<status status="PASS" starttime="20220320 18:44:16.260" endtime="20220320 18:44:25.958"/>
 </test>
 <kw name="Close all browsers sessions" library="initialize" type="TEARDOWN">
 <kw name="Close All Browsers" library="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220320 12:28:20.136" endtime="20220320 12:28:20.276"/>
+<status status="PASS" starttime="20220320 18:44:25.959" endtime="20220320 18:44:26.055"/>
 </kw>
-<status status="PASS" starttime="20220320 12:28:20.136" endtime="20220320 12:28:20.276"/>
+<status status="PASS" starttime="20220320 18:44:25.959" endtime="20220320 18:44:26.055"/>
 </kw>
-<status status="PASS" starttime="20220320 12:26:26.225" endtime="20220320 12:28:20.276"/>
+<status status="PASS" starttime="20220320 18:43:15.724" endtime="20220320 18:44:26.055"/>
+</suite>
+<suite id="s1-s2" name="Google Home Search Rf Firefox" source="/Users/manikantanuv/Documents/Robot_Repositories/tests/google_home_search_rf_firefox.robot">
+<kw name="Run Keyword" library="BuiltIn" type="SETUP">
+<arg>Running the tests in firefox webdrivermanager</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="Running the tests in firefox webdrivermanager" library="initialize">
+<kw name="Get Geckodriver Path" library="geckodriver_manager">
+<var>${driver}</var>
+<msg timestamp="20220320 18:44:26.059" level="INFO">
+</msg>
+<msg timestamp="20220320 18:44:26.059" level="INFO">====== WebDriver manager ======</msg>
+<msg timestamp="20220320 18:44:26.532" level="INFO">Current firefox version is 98.0</msg>
+<msg timestamp="20220320 18:44:26.533" level="INFO">Get LATEST geckodriver version for 98.0 firefox</msg>
+<msg timestamp="20220320 18:44:27.202" level="INFO">Driver [/Users/manikantanuv/Documents/Robot_Repositories/drivers/geckodriver/macos-aarch64/v0.30.0/geckodriver] found in cache</msg>
+<msg timestamp="20220320 18:44:27.202" level="INFO">/Users/manikantanuv/Documents/Robot_Repositories/drivers/geckodriver/macos-aarch64/v0.30.0/geckodriver</msg>
+<msg timestamp="20220320 18:44:27.202" level="INFO">${driver} = /Users/manikantanuv/Documents/Robot_Repositories/drivers/geckodriver/macos-aarch64/v0.30.0/geckodriver</msg>
+<status status="PASS" starttime="20220320 18:44:26.059" endtime="20220320 18:44:27.202"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>headlessfirefox</arg>
+<arg>executable_path=${driver}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220320 18:44:27.203" level="INFO">Opening browser 'headlessfirefox' to base url 'about:blank'.</msg>
+<msg timestamp="20220320 18:44:27.204" level="INFO">Firefox driver log is always forced to to: /Users/manikantanuv/Documents/Robot_Repositories/reports/geckodriver-2.log</msg>
+<status status="PASS" starttime="20220320 18:44:27.202" endtime="20220320 18:44:28.812"/>
+</kw>
+<status status="PASS" starttime="20220320 18:44:26.059" endtime="20220320 18:44:28.812"/>
+</kw>
+<status status="PASS" starttime="20220320 18:44:26.059" endtime="20220320 18:44:28.812"/>
+</kw>
+<test id="s1-s2-t1" name="TC_01 Goto https://www.google.com and search Robot Framework">
+<kw name="Given Navigate to Webpage" library="pg_google_home">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${site_url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220320 18:44:28.813" level="INFO">Opening url 'https://www.google.com'</msg>
+<status status="PASS" starttime="20220320 18:44:28.813" endtime="20220320 18:44:40.447"/>
+</kw>
+<status status="PASS" starttime="20220320 18:44:28.813" endtime="20220320 18:44:40.448"/>
+</kw>
+<kw name="When Webpage is open and title is visible" library="pg_google_home">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${title_url}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220320 18:44:40.451" level="INFO">Page title is 'Google'.</msg>
+<status status="PASS" starttime="20220320 18:44:40.448" endtime="20220320 18:44:40.451"/>
+</kw>
+<status status="PASS" starttime="20220320 18:44:40.448" endtime="20220320 18:44:40.451"/>
+</kw>
+<kw name="Then Search something in google search bar" library="pg_google_home">
+<arg>${searchitem}[0]</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${ele_search}</arg>
+<arg>${searchitem}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220320 18:44:40.452" level="INFO">Typing text 'Robot Framework' into text field 'xpath://input[@title='Search']'.</msg>
+<status status="PASS" starttime="20220320 18:44:40.452" endtime="20220320 18:44:40.492"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ele_btn_search}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220320 18:44:40.493" level="INFO">Clicking element 'xpath:(//*[@value='Google Search'])[2]'.</msg>
+<status status="PASS" starttime="20220320 18:44:40.493" endtime="20220320 18:44:53.783"/>
+</kw>
+<status status="PASS" starttime="20220320 18:44:40.451" endtime="20220320 18:44:53.783"/>
+</kw>
+<kw name="And Validate search results has ${searchitem}[0]" library="pg_google_home" sourcename="Validate search results has ${searchitem}">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Google</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220320 18:44:53.784" endtime="20220320 18:44:53.792"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${searchitem}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220320 18:44:53.813" level="INFO">Current page contains text 'Robot Framework'.</msg>
+<status status="PASS" starttime="20220320 18:44:53.792" endtime="20220320 18:44:53.813"/>
+</kw>
+<status status="PASS" starttime="20220320 18:44:53.783" endtime="20220320 18:44:53.813"/>
+</kw>
+<kw name="And Click on first link that contains Robot Framework and validate title" library="pg_google_home">
+<arg>${searchitem}[0]</arg>
+<arg>${title}[0]</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//h3[text()=\'${searchitem}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220320 18:44:53.814" level="INFO">Clicking element 'xpath=//h3[text()='Robot Framework']'.</msg>
+<status status="PASS" starttime="20220320 18:44:53.814" endtime="20220320 18:44:54.032"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//title[text()=\'${title}\']</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220320 18:44:54.032" endtime="20220320 18:44:55.503"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220320 18:44:55.505" level="INFO">Page title is 'Robot Framework'.</msg>
+<status status="PASS" starttime="20220320 18:44:55.503" endtime="20220320 18:44:55.505"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220320 18:44:55.539" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-48.png"&gt;&lt;img src="selenium-screenshot-48.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220320 18:44:55.506" endtime="20220320 18:44:55.539"/>
+</kw>
+<status status="PASS" starttime="20220320 18:44:53.813" endtime="20220320 18:44:55.539"/>
+</kw>
+<status status="PASS" starttime="20220320 18:44:28.812" endtime="20220320 18:44:55.540"/>
+</test>
+<test id="s1-s2-t2" name="TC_03 Goto https://www.google.com and search Amazon">
+<kw name="Given Navigate to Webpage" library="pg_google_home">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${site_url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220320 18:44:55.541" level="INFO">Opening url 'https://www.google.com'</msg>
+<status status="PASS" starttime="20220320 18:44:55.540" endtime="20220320 18:44:56.734"/>
+</kw>
+<status status="PASS" starttime="20220320 18:44:55.540" endtime="20220320 18:44:56.734"/>
+</kw>
+<kw name="When Webpage is open and title is visible" library="pg_google_home">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${title_url}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220320 18:44:56.736" level="INFO">Page title is 'Google'.</msg>
+<status status="PASS" starttime="20220320 18:44:56.734" endtime="20220320 18:44:56.736"/>
+</kw>
+<status status="PASS" starttime="20220320 18:44:56.734" endtime="20220320 18:44:56.736"/>
+</kw>
+<kw name="Then Search something in google search bar" library="pg_google_home">
+<arg>${searchitem}[1]</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${ele_search}</arg>
+<arg>${searchitem}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220320 18:44:56.736" level="INFO">Typing text 'Amazon.in' into text field 'xpath://input[@title='Search']'.</msg>
+<status status="PASS" starttime="20220320 18:44:56.736" endtime="20220320 18:44:56.754"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ele_btn_search}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220320 18:44:56.754" level="INFO">Clicking element 'xpath:(//*[@value='Google Search'])[2]'.</msg>
+<status status="PASS" starttime="20220320 18:44:56.754" endtime="20220320 18:45:01.203"/>
+</kw>
+<status status="PASS" starttime="20220320 18:44:56.736" endtime="20220320 18:45:01.203"/>
+</kw>
+<kw name="And Validate search results has ${searchitem}[1]" library="pg_google_home" sourcename="Validate search results has ${searchitem}">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Google</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220320 18:45:01.204" endtime="20220320 18:45:01.212"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${searchitem}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220320 18:45:01.220" level="INFO">Current page contains text 'Amazon.in'.</msg>
+<status status="PASS" starttime="20220320 18:45:01.212" endtime="20220320 18:45:01.220"/>
+</kw>
+<status status="PASS" starttime="20220320 18:45:01.203" endtime="20220320 18:45:01.220"/>
+</kw>
+<kw name="And Click on first link that contains Robot Framework and validate title" library="pg_google_home">
+<arg>${searchitem}[1]</arg>
+<arg>${title}[1]</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//h3[text()=\'${searchitem}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220320 18:45:01.220" level="INFO">Clicking element 'xpath=//h3[text()='Amazon.in']'.</msg>
+<status status="PASS" starttime="20220320 18:45:01.220" endtime="20220320 18:45:21.350"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//title[text()=\'${title}\']</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220320 18:45:21.350" endtime="20220320 18:45:21.370"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220320 18:45:21.371" level="INFO">Page title is 'Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in'.</msg>
+<status status="PASS" starttime="20220320 18:45:21.370" endtime="20220320 18:45:21.372"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220320 18:45:21.451" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-49.png"&gt;&lt;img src="selenium-screenshot-49.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220320 18:45:21.372" endtime="20220320 18:45:21.451"/>
+</kw>
+<status status="PASS" starttime="20220320 18:45:01.220" endtime="20220320 18:45:21.451"/>
+</kw>
+<status status="PASS" starttime="20220320 18:44:55.540" endtime="20220320 18:45:21.451"/>
+</test>
+<test id="s1-s2-t3" name="TC_02 Goto https://www.google.com and search Flipkart">
+<kw name="Given Navigate to Webpage" library="pg_google_home">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${site_url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220320 18:45:21.452" level="INFO">Opening url 'https://www.google.com'</msg>
+<status status="PASS" starttime="20220320 18:45:21.452" endtime="20220320 18:45:25.458"/>
+</kw>
+<status status="PASS" starttime="20220320 18:45:21.452" endtime="20220320 18:45:25.458"/>
+</kw>
+<kw name="When Webpage is open and title is visible" library="pg_google_home">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${title_url}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220320 18:45:25.461" level="INFO">Page title is 'Google'.</msg>
+<status status="PASS" starttime="20220320 18:45:25.459" endtime="20220320 18:45:25.461"/>
+</kw>
+<status status="PASS" starttime="20220320 18:45:25.459" endtime="20220320 18:45:25.461"/>
+</kw>
+<kw name="Then Search something in google search bar" library="pg_google_home">
+<arg>${searchitem}[2]</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${ele_search}</arg>
+<arg>${searchitem}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220320 18:45:25.462" level="INFO">Typing text 'Flipkart' into text field 'xpath://input[@title='Search']'.</msg>
+<status status="PASS" starttime="20220320 18:45:25.462" endtime="20220320 18:45:25.480"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ele_btn_search}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220320 18:45:25.480" level="INFO">Clicking element 'xpath:(//*[@value='Google Search'])[2]'.</msg>
+<status status="PASS" starttime="20220320 18:45:25.480" endtime="20220320 18:45:26.828"/>
+</kw>
+<status status="PASS" starttime="20220320 18:45:25.462" endtime="20220320 18:45:26.828"/>
+</kw>
+<kw name="And Validate search results has ${searchitem}[2]" library="pg_google_home" sourcename="Validate search results has ${searchitem}">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Google</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220320 18:45:26.828" endtime="20220320 18:45:26.837"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${searchitem}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220320 18:45:26.851" level="INFO">Current page contains text 'Flipkart'.</msg>
+<status status="PASS" starttime="20220320 18:45:26.837" endtime="20220320 18:45:26.851"/>
+</kw>
+<status status="PASS" starttime="20220320 18:45:26.828" endtime="20220320 18:45:26.851"/>
+</kw>
+<kw name="And Click on first link that contains Robot Framework and validate title" library="pg_google_home">
+<arg>${searchitem}[2]</arg>
+<arg>${title}[2]</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//h3[text()=\'${searchitem}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220320 18:45:26.851" level="INFO">Clicking element 'xpath=//h3[text()='Flipkart']'.</msg>
+<status status="PASS" starttime="20220320 18:45:26.851" endtime="20220320 18:45:45.031"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//title[text()=\'${title}\']</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220320 18:45:45.031" endtime="20220320 18:45:45.034"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220320 18:45:45.036" level="INFO">Page title is 'Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books &amp; More. Best Offers!'.</msg>
+<status status="PASS" starttime="20220320 18:45:45.034" endtime="20220320 18:45:45.036"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220320 18:45:45.089" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-50.png"&gt;&lt;img src="selenium-screenshot-50.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220320 18:45:45.036" endtime="20220320 18:45:45.089"/>
+</kw>
+<status status="PASS" starttime="20220320 18:45:26.851" endtime="20220320 18:45:45.089"/>
+</kw>
+<status status="PASS" starttime="20220320 18:45:21.452" endtime="20220320 18:45:45.089"/>
+</test>
+<kw name="Close all browsers sessions" library="initialize" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220320 18:45:45.090" endtime="20220320 18:45:45.363"/>
+</kw>
+<status status="PASS" starttime="20220320 18:45:45.090" endtime="20220320 18:45:45.363"/>
+</kw>
+<status status="PASS" starttime="20220320 18:44:26.056" endtime="20220320 18:45:45.363"/>
+</suite>
+<status status="PASS" starttime="20220320 18:43:15.715" endtime="20220320 18:45:45.364"/>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="0" skip="0">All Tests</stat>
+<stat pass="8" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="3" fail="0" skip="0" id="s1" name="Google Home Search Rf">Google Home Search Rf</stat>
+<stat pass="8" fail="0" skip="0" id="s1" name="Google Home Search Rf Chrome &amp; Google Home Search Rf Firefox">Google Home Search Rf Chrome &amp; Google Home Search Rf Firefox</stat>
+<stat pass="5" fail="0" skip="0" id="s1-s1" name="Google Home Search Rf Chrome">Google Home Search Rf Chrome &amp; Google Home Search Rf Firefox.Google Home Search Rf Chrome</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s2" name="Google Home Search Rf Firefox">Google Home Search Rf Chrome &amp; Google Home Search Rf Firefox.Google Home Search Rf Firefox</stat>
 </suite>
 </statistics>
 <errors>

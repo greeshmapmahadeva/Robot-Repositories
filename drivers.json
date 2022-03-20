@@ -2,5 +2,9 @@
     "mac64_m1_chromedriver_99.0.4844.51_for_": {
         "timestamp": "20/03/2022",
         "binary_path": "/Users/manikantanuv/Documents/Robot_Repositories/drivers/chromedriver/mac64_m1/99.0.4844.51/chromedriver"
+    },
+    "macos-aarch64_geckodriver_v0.30.0_for_": {
+        "timestamp": "20/03/2022",
+        "binary_path": "/Users/manikantanuv/Documents/Robot_Repositories/drivers/geckodriver/macos-aarch64/v0.30.0/geckodriver"
     }
 }
