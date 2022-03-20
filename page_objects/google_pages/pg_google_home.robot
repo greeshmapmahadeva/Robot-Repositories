@@ -34,7 +34,7 @@ Click on first link that contains Robot Framework and validate title
 
 
 
-    Wait Until Page Contains Element    //title[text()=\'${title}\']
+    Wait Until Page Contains Element    //title[text()=\'${title}\']    10
     # Sleep    3
     Title Should Be    ${title}
     
