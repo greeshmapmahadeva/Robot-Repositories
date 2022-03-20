@@ -31,6 +31,11 @@ Click on first link that contains Robot Framework and validate title
     [Arguments]        ${searchitem}    ${title}
     
     Click Element    xpath=//h3[text()=\'${searchitem}']
+
+
+
+    Wait Until Page Contains Element    //title[text()='Robot Framework']
+    # Sleep    3
     Title Should Be    ${title}
     
     Capture Page Screenshot

@@ -6,7 +6,8 @@ Resource                       ../page_objects/all_page_objects.robot
 Resource                       ../resources/initialize.robot
 # Resource                       ../page_objects/pg_google_home.robot
 Suite Setup                    Run Keyword
-                               ...  Start Browser and Maximize using ChromedriverManager                
+                               ...  Running the tests in chrome headless
+                
 
 Suite Teardown                 Close all browsers sessions
 
