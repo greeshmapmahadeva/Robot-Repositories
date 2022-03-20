@@ -15,9 +15,9 @@ Suite Teardown                 Close all browsers sessions
 
 
 *** Variables ***
-@{searchitem}               Robot Framework    Amazon.in    Flipkart
+@{searchitem}               Robot Framework    Amazon.in    Flipkart    PyPI · The Python Package Index    Welcome to Python.org
 # ${searchitem_01}               Amazon.in
-@{title}                    Robot Framework        Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in        Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!
+@{title}                    Robot Framework        Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in        Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!    PyPI · The Python Package Index    Welcome to Python.org
 
 *** Test Cases ***
 TC_01 Goto ${site_url} and search Robot Framework
