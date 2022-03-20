@@ -3,7 +3,7 @@ Library                        SeleniumLibrary
 Library                        ../custom_libraries/chromedriver_manager.py
 Resource                       ../resources/initialize.robot
 Resource                       ../page_objects/all_page_objects.robot
-Resource    ../resources/initialize.robot
+Resource                       ../resources/initialize.robot
 # Resource                       ../page_objects/pg_google_home.robot
 Suite Setup                    Run Keyword
                                ...  Start Browser and Maximize using ChromedriverManager                
