@@ -27,7 +27,7 @@ pipeline {
     
 	    stage('Execute script') {
             	steps {
-                	sh 'python -m robot tests/ '
+                	sh '/usr/local/bin/robot -m robot tests/ '
             	}
        	      }
   }
