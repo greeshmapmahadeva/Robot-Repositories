@@ -25,7 +25,8 @@ pipeline {
                 	sh 'robot *.robot'
             	}
        	      }
-	      post {
+  }
+	    post {
         	always {
 		        script {
 		          step(
@@ -45,6 +46,5 @@ pipeline {
 	  		}		
 	    }
 	}    
-  }
   
-
+  
