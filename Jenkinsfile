@@ -28,9 +28,9 @@ pipeline {
 		      //  	sh 'python3 -m robot.rebot --merge --output reports/output.xml -l reports/log.html -r reports/report.html reports1/output.xml reports/output.xml'
 		      //  	sh 'exit 0'
 		        script{	
-		            sh 'cd /Users/manikantanuv/Documents/Robot_Repositories'
-		            sh 'PATH=/Library/Frameworks/Python.framework/Versions/3.10/bin:$PATH'
-                    sh 'cd /Users/manikantanuv/Documents/Robot_Repositories'
+		            sh 'cd Robot_Repositories'
+		            sh 'PATH=/Library/Frameworks/Python.framework/Versions/3.11/bin:$PATH'
+                    sh 'cd Robot_Repositories'
                     sh 'echo PATH'
                     sh 'python3 -m robot --outputdir reports tests/*.robot'
                     
