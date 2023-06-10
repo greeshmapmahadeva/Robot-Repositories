@@ -27,7 +27,7 @@ pipeline {
     
 	    stage('Execute script') {
             	steps {
-                	sh 'robot *.robot'
+                	sh 'robot tests/ '
             	}
        	      }
   }
