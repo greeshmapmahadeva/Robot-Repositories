@@ -27,12 +27,12 @@ Close all browsers sessions
 
 
 Running the tests in chrome headless
-    ${driver}=    Chromedriver_manager.Get Chromedriver Path    
-    log    ${driver}  
+    #${driver}=    Chromedriver_manager.Get Chromedriver Path    
+    #log    ${driver}  
     ${chrome options} =     Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
     Call Method    ${chrome options}   add_argument    headless
     Call Method    ${chrome options}   add_argument    disable-gpu
-    Create Webdriver    Chrome    chrome_options=${chrome options}    executable_path=${driver}
+    Create Webdriver    Chrome    chrome_options=${chrome options}    executable_path=/usr/local/bin/chromedriver
 
 Running the tests in firefox headless
     ${driver}=    Geckodriver_manager.Get Geckodriver Path    
