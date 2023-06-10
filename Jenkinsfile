@@ -27,7 +27,7 @@ pipeline {
     
 	    stage('Execute script') {
             	steps {
-                	sh '/usr/local/bin/robot -m robot tests/ '
+                	sh '/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/robot -m robot tests/ '
             	}
        	      }
   }
